@@ -9,6 +9,9 @@
 // Create function for checking pet status
 // Create timer function that lowers Health and Wight over time
 // Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter, Camp Dog will run away
+// If Camp Dog satys at camp long enough, his Wolf Pack shows up
+// Open Reset "Win" Window, intro upcoming sequel/ paywall
+// Sequel will be named Camp Dog 2: Wolf Pack
 // Camper is left alone 
 // Camp Dog has no name
 
@@ -38,23 +41,23 @@ class CampDog{
             }  
         }, 1500)
     }
-    fire() {
-        if(campDog.warmth <= 100) {
-        campDog.warmth+= 10;
-        console.log(`Camp Dog warmed up: Warmth Level ${campDog.warmth}`)
-        }
-    }
-    warmthDepletion() {
-        let warmthLevel = setInterval(function(){
-            campDog.warmth-= 10
-            console.log(`Warmth Level ${campDog.warmth}`)
-            if(campDog.warmth === 0) {
-                clearInterval(warmthLevel)
-                console.log("Camp Dog Got Cold")
-                campDog.dogRunsAway()
-            }
-        }, 1500);
-    }
+    // fire() {
+    //     if(campDog.warmth <= 100) {
+    //     campDog.warmth+= 10;
+    //     console.log(`Camp Dog warmed up: Warmth Level ${campDog.warmth}`)
+    //     }
+    // }
+    // warmthDepletion() {
+    //     let warmthLevel = setInterval(function(){
+    //         campDog.warmth-= 10
+    //         console.log(`Warmth Level ${campDog.warmth}`)
+    //         if(campDog.warmth === 0) {
+    //             clearInterval(warmthLevel)
+    //             console.log("Camp Dog Got Cold")
+    //             campDog.dogRunsAway()
+    //         }
+    //     }, 1500);
+    // }
     dogRunsAway() {
         if(campDog.warmth == 0 || campDog.eaten == 0) {
             console.log("Camp Dog R-U-N-N-O-F-T")
