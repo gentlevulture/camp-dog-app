@@ -32,7 +32,7 @@ class CampDog{
         }
     }
     foodDepletion() {
-        var eatenLevel = setInterval(function(){
+        let eatenLevel = setInterval(function(){
             campDog.eaten-= 10
             console.log(`Food Level: ${campDog.eaten}`)
             if(campDog.eaten === 0){
@@ -49,7 +49,7 @@ class CampDog{
         }
     }
     warmthDepletion() {
-        var warmthLevel = setInterval(function(){
+        let warmthLevel = setInterval(function(){
             campDog.warmth-= 10
             console.log(`Warmth Level ${campDog.warmth}`)
             if(campDog.warmth === 0) {
