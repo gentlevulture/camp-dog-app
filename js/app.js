@@ -6,10 +6,6 @@
 // Food button function will increase pet food level
 // Food must be cooked in fire to feed Camp Dog. After all, he can hunt for raw meat by himself
 // Fire button function will increase pet warmth
-// Firewood must be collected during hunts
-// Hunt button will decrease pet health and decrease pet weight
-// Hunt success will be determined by Camp Dogs current health and weight over timer
-// Hunt function will also contain chance conditionals to obtain RawMeat and FireWood
 // Create function for checking pet status
 // Create timer function that lowers Health and Wight over time
 // Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter, Camp Dog will run away
