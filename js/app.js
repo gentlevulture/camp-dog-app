@@ -26,6 +26,8 @@ function elapsedTime() {
     parSecs++
     meter()
     playPad()
+    fireGauge()
+    boneGauge()
     console.log(parSecs) 
     console.log(`warmth: ${warmth}, nourish: ${nourish}`)
     if (warmth === 0 || nourish === 0) {
@@ -70,4 +72,36 @@ function playPad() {
 
 function ranAway() {
     document.getElementById('zero').innerHTML = '<span>Camp Dog R-U-N-N-O-F-T! </br>You kept him around for ' + parSecs + ' parsecs.</br>You can hear the wolves approaching...</span>';
+}
+
+function fireGauge() {
+    let image = document.getElementById('fire')
+    if (warmth === 8) {
+        image.src = "images/fire-75-button.png"
+    }
+    else if(warmth === 6) {
+        image.src = "images/fire-50-button.png"
+    }
+    else if(warmth === 4) {
+        image.src = "images/fire-25-button.png"
+    }
+    else if(warmth === 2) {
+        image.src = "images/fire-button-off.png"
+    }
+}
+
+function boneGauge() {
+    let image = document.getElementById('bone')
+    if (nourish === 8) {
+        image.src = "images/bone-75-button.png"
+    }
+    else if(nourish === 6) {
+        image.src = "images/bone-50-button.png"
+    }
+    else if(nourish === 4) {
+        image.src = "images/bone-25-button.png"
+    }
+    else if(nourish === 2) {
+        image.src = "images/bone-button-off.png"
+    }
 }
