@@ -20,7 +20,6 @@ let warmth = 10
 
 let parSecs = 0, clock
 
-
 clock = setInterval(elapsedTime,1000)
 
 function elapsedTime() {
@@ -30,7 +29,8 @@ function elapsedTime() {
     console.log(parSecs) 
     console.log(`warmth: ${warmth}, nourish: ${nourish}`)
     if (warmth === 0 || nourish === 0) {
-        clearInterval(clock);
+        clearInterval(clock)
+        ranAway()
     }
 } 
 
@@ -66,4 +66,8 @@ function playPad() {
     } else if (nourish === 0 || warmth === 0) {
         backGround.style.display = "none";
     }
+}
+
+function ranAway() {
+    document.getElementById('zero').innerHTML = '<span>Camp Dog R-U-N-N-O-F-T! </br>You kept him around for ' + parSecs + ' parsecs.</br>You can hear the wolves approaching...</span>';
 }
