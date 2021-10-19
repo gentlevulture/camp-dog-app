@@ -5,8 +5,8 @@
 //// create button click elements that will call functions to increase nourish and warmth
 //// Food button function will increase pet nourishment
 //// Fire button function will increase pet warmth
-// Create timer function that lowers warmth and nourishment over time
-// Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter to make console disappear
+//// Create timer function that lowers warmth and nourishment over time
+//// Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter to make console disappear
 // Camp Dog will then run away
 // GameOver Screen
 // If Camp Dog stays at camp long enough, his Wolf Pack shows up
@@ -35,14 +35,14 @@ function elapsedTime() {
 } 
 
 document.getElementById("bone").onclick = function feed() {
-    if (nourish < 15) {
+    if (nourish < 10) {
         nourish++
         console.log("CampDog fed")
     }
 }
 
-document.getElementById("fire").onclick = function heal() {
-    if (warmth < 15) {
+document.getElementById("fire").onclick = function warm() {
+    if (warmth < 10) {
         warmth++
         console.log("CampDog warmed up")
     }
