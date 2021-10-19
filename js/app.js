@@ -15,12 +15,12 @@
 // Camper is left alone 
 // Camp Dog has no name
 
-let nourish = 10
-let warmth = 10
+let nourish = 5
+let warmth = 5
 
 let parSecs = 0, clock
 
-clock = setInterval(elapsedTime,1000)
+clock = setInterval(elapsedTime, 1500)
 
 function elapsedTime() {
     parSecs++
@@ -37,14 +37,14 @@ function elapsedTime() {
 } 
 
 document.getElementById("bone").onclick = function feed() {
-    if (nourish < 10) {
+    if (nourish < 5) {
         nourish++
         console.log("CampDog fed")
     }
 }
 
 document.getElementById("fire").onclick = function warm() {
-    if (warmth < 10) {
+    if (warmth < 5) {
         warmth++
         console.log("CampDog warmed up")
     }
@@ -76,32 +76,38 @@ function ranAway() {
 
 function fireGauge() {
     let image = document.getElementById('fire')
-    if (warmth === 8) {
+    if (warmth === 5) {
+        image.src = "images/fire-button-on.png"
+    }
+    else if (warmth === 4) {
         image.src = "images/fire-75-button.png"
     }
-    else if(warmth === 6) {
+    else if(warmth === 3) {
         image.src = "images/fire-50-button.png"
     }
-    else if(warmth === 4) {
+    else if(warmth === 2) {
         image.src = "images/fire-25-button.png"
     }
-    else if(warmth === 2) {
+    else if(warmth === 1) {
         image.src = "images/fire-button-off.png"
     }
 }
 
 function boneGauge() {
     let image = document.getElementById('bone')
-    if (nourish === 8) {
+    if (nourish === 5) {
+        image.src = "images/bone-button-on.png"
+    }
+    else if (nourish === 4) {
         image.src = "images/bone-75-button.png"
     }
-    else if(nourish === 6) {
+    else if(nourish === 3) {
         image.src = "images/bone-50-button.png"
     }
-    else if(nourish === 4) {
+    else if(nourish === 2) {
         image.src = "images/bone-25-button.png"
     }
-    else if(nourish === 2) {
+    else if(nourish === 1) {
         image.src = "images/bone-button-off.png"
     }
 }
