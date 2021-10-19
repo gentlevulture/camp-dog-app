@@ -6,7 +6,8 @@
 //// Food button function will increase pet nourishment
 //// Fire button function will increase pet warmth
 // Create timer function that lowers warmth and nourishment over time
-// Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter, Camp Dog will run away and console disappears
+// Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter to make console disappear
+// Camp Dog will then run away
 // GameOver Screen
 // If Camp Dog stays at camp long enough, his Wolf Pack shows up
 // Open Reset "Win" Window, intro upcoming sequel/ paywall
@@ -25,8 +26,12 @@ clock = setInterval(elapsedTime,1000)
 function elapsedTime() {
     parSecs++
     meter()
+    playPad()
     console.log(parSecs) 
-    console.log(`warmth: ${warmth}, nourish: ${nourish}`)  
+    console.log(`warmth: ${warmth}, nourish: ${nourish}`)
+    if (warmth === 0 || nourish === 0) {
+        clearInterval(clock);
+    }
 } 
 
 document.getElementById("bone").onclick = function feed() {
@@ -52,4 +57,13 @@ function meter() {
 }
 function whichMeter() {
     return Math.floor(Math.random()*2)
+}
+
+function playPad() {
+    let backGround = document.getElementById("gameSticker");
+    if (nourish > 0 && warmth > 0) {
+        backGround.style.display = "block";
+    } else if (nourish === 0 || warmth === 0) {
+        backGround.style.display = "none";
+    }
 }
