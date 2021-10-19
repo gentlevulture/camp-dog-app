@@ -1,6 +1,7 @@
-// Set intitial variables
-// Two variables representing meters for nourishment and warmth levels
-// Set counter at 0 to begin measuring time Camp Dog stays at camp
+//// set intitial variables
+//// two variables representing meters for nourishment and warmth levels
+//// start counter at 0 to begin measuring time Camp Dog stays at camp
+//// creat timer to measure time passed
 // create button click elements that will call functions to increase nourish and warmth
 // Food button function will increase pet nourishment
 // Fire button function will increase pet warmth
@@ -16,13 +17,27 @@
 let nourish = 10;
 let warmth = 10;
 
-let parSecs = 0, timer;
+let parSecs = 0, clock;
 
 
-timer = setInterval(timePassed,1000);
+clock = setInterval(elapsedTime,1000);
 
-function timePassed() {
+function elapsedTime() {
     parSecs++;
     console.log(parSecs) 
     console.log(`warmth: ${warmth}, nourish: ${nourish}`)  
 } 
+
+document.getElementById("bone").onclick = function feed() {
+    if (nourish < 15) {
+        nourish++;
+        console.log("CampDog fed")
+    }
+}
+
+document.getElementById("fire").onclick = function heal() {
+    if (warmth < 15) {
+        warmth++;
+        console.log("CampDog warmed up")
+    }
+}
