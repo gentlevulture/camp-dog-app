@@ -1,3 +1,24 @@
 body {
   background-image: url("../images/campground with sleeping bag.png");
 }
+
+body {
+  text-align: center;
+}
+
+h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 56px;
+  color: bisque;
+}
+
+#gameSticker{
+  width: 175px;
+  margin-top: 130px;
+}
+
+#zero{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 26px;
+  color: rgb(170, 89, 170);
+}
