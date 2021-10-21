@@ -6,11 +6,19 @@ A random dog has walked in from the woods surrounding you. It's October and the 
  
 ## _Game Instructions_
 
- Simply press the **Fire** button to raise the warmth meter, and press the **Bone** button as as the meters run down down. 
- 
- The faster you press, the faster the meter fills.
- 
- If the fire is not kept up or if camp dog doesn't get enough bones, comma he will take off. However, if you manage to be friend camp dog for  A certain amount of time, Enough time to gain his trust, You will be in for a surprise!
+Simply press the **Fire** button to raise the warmth meter, 
+
+![Screenshot One](images/fire-down-screenshot.png)
+
+and press the **Bone** button as as the meters run down down. 
+
+![Screenshot Two](images/bone-down-screen-shot.png)
+
+The faster you press, the faster the meter fills.
+
+![Screenshot Three](images/meters-down-screenshot.png)
+
+ If the fire is not kept up or if camp dog doesn't get enough bones, comma he will take off. However, if you manage to befriend Camp Dog for  A certain amount of time, Enough time to gain his trust, You will be in for a surprise!
 
  Get ready to befriend the wild beast that is CAMP DOG to find out more about him!
  
