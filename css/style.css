@@ -1,14 +1,36 @@
-body {
-  background-image: url("../images/campground with sleeping bag.png");
-  background-repeat: no-repeat;
-  background-size: inherit;
-}
+/* target dog element to lock down using position*/
+
 
 h1{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 56px;
-  color: bisque;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 56px;
+    color: bisque;
 }
+  
+.night-time {
+  background-image: url("../images/campground with sleeping bag.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50%;
+  max-height: 70%;
+}
+
+.day-time {
+  background-image: url("../images/day-background-sticker.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50%;
+  max-height: 70%;
+}
+
+.game-over {
+  background-image: url("../images/game-over.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50%;
+  max-height: 70%;
+}
+
 
 #gameSticker{
   width: 175px;

@@ -27,6 +27,7 @@ let parSecs = 0, clock
 // function toggleDayNight() {
 // } 
 
+let background = document.querySelector(".night-time")
 clock = setInterval(elapsedTime, 1500)
 
 function elapsedTime() {
@@ -37,7 +38,7 @@ function elapsedTime() {
     boneGauge()
     console.log(parSecs) 
     console.log(`warmth: ${warmth}, nourish: ${nourish}`)
-    if(parSecs >= 2) {
+    if(parSecs >= 15) {
         clearInterval(clock)
         console.log(`Youv've kept him around`)
         renderWin()
@@ -47,10 +48,6 @@ function elapsedTime() {
         ranAway()
     }
 } 
-
-let gamestate = {
-    
-}
 
 document.getElementById("bone").onclick = function feed() {
     if (nourish < 5) {
@@ -87,6 +84,9 @@ function playPad() {
 }
 
 function ranAway() {
+    // if statement needed to handle day-time change
+    background.classList.remove("night-time")
+    background.classList.add("game-over")
     document.getElementById('endStatement').innerHTML = '<span>CAMP DOG R-U-N-N-O-F-T! </br>You kept him around for ' + parSecs + ' parsecs.</br>You can hear the wolves approaching...</span>';
 }
 
