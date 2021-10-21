@@ -1,4 +1,7 @@
 # **CAMP DOG**
+ Link here:
+
+ [_Play_ **CAMP DOG** _now_!](https://camp-dog-app.netlify.app/)
 
 A random dog has walked in from the woods surrounding you. It's October and the nights are starting to get really cold. The dog seems to have been attracted to you're fire.  He's a bit mangy and dirty but he also looks pretty hungry. You reach towards your leftovers, there are a few bones you could toss over from the game you've been cooking yourself. But as you turn towards the remains, you find yourself face to face with a raccoon! Before you can even react, the dog scares the raccoon away. You nod approvingly, toss him a bone, and he rests by the fire.
 
@@ -22,6 +25,3 @@ The faster you press, the faster the meter fills.
 
  Get ready to befriend the wild beast that is CAMP DOG to find out more about him!
  
- Link here:
-
- [_Play_ **CAMP DOG** _now_!](https://camp-dog-app.netlify.app/)

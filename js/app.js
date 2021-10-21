@@ -7,18 +7,25 @@
 //// Fire button function will increase pet warmth
 //// Create timer function that lowers warmth and nourishment over time
 //// Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter to make console disappear
-// Camp Dog will then run away
+//// Camp Dog will then run away
 // GameOver Screen
-// If Camp Dog stays at camp long enough, his Wolf Pack shows up
+// Camper is left alone, surounded by wolves
+//// If Camp Dog stays at camp long enough, his Wolf Pack shows up
 // Open Reset "Win" Window, intro upcoming sequel/ paywall
 // Sequel will be named Camp Dog 2: Wolf Pack
-// Camper is left alone 
 // Camp Dog has no name
 
 let nourish = 5
 let warmth = 5
 
 let parSecs = 0, clock
+
+// const dayNightBtn = document.querySelector('#day-night-btn')
+
+// dayNightBtn.addEventListener('click', toggleDayNight)
+
+// function toggleDayNight() {
+// } 
 
 clock = setInterval(elapsedTime, 1500)
 
@@ -30,11 +37,20 @@ function elapsedTime() {
     boneGauge()
     console.log(parSecs) 
     console.log(`warmth: ${warmth}, nourish: ${nourish}`)
+    if(parSecs >= 2) {
+        clearInterval(clock)
+        console.log(`Youv've kept him around`)
+        renderWin()
+    }
     if (warmth === 0 || nourish === 0) {
         clearInterval(clock)
         ranAway()
     }
 } 
+
+let gamestate = {
+    
+}
 
 document.getElementById("bone").onclick = function feed() {
     if (nourish < 5) {
@@ -64,14 +80,19 @@ function whichMeter() {
 function playPad() {
     let backGround = document.getElementById("gameSticker");
     if (nourish > 0 && warmth > 0) {
-        backGround.style.display = "block";
-    } else if (nourish === 0 || warmth === 0) {
-        backGround.style.display = "none";
+        backGround.style.display = "block"
+    }else if (nourish === 0 || warmth === 0) {
+        backGround.style.display = "none"
     }
 }
 
 function ranAway() {
-    document.getElementById('zero').innerHTML = '<span>Camp Dog R-U-N-N-O-F-T! </br>You kept him around for ' + parSecs + ' parsecs.</br>You can hear the wolves approaching...</span>';
+    document.getElementById('endStatement').innerHTML = '<span>CAMP DOG R-U-N-N-O-F-T! </br>You kept him around for ' + parSecs + ' parsecs.</br>You can hear the wolves approaching...</span>';
+}
+
+function renderWin() {
+    document.getElementById('endStatement').innerHTML = '<span></br>You kept him around for ' + parSecs + ' parsecs and he now trusts you.</br>Turns out he was raised by wolves...</br>Prepare yourself for CAMP DOG 2: WOLF PACK</span>'
+
 }
 
 function fireGauge() {
@@ -111,3 +132,4 @@ function boneGauge() {
         image.src = "images/bone-button-off.png"
     }
 }
+
