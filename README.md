@@ -1,19 +1,27 @@
 # **CAMP DOG**
+ 
+ 
+ #### Inspired by the adventures of the animal companions in classic films like _Hondo_, _Homeward Bound: The Incredible Journey_, and _Anchorman: The Legend of Ron Burgundy_.
+ 
  Link here:
-
  [_Play_ **CAMP DOG** _now_!](https://camp-dog-app.netlify.app/)
+ >"That dog don't take to pettin', son." -- Hondo Lane
 
-A random dog has walked in from the woods surrounding you. It's October and the nights are starting to get really cold. The dog seems to have been attracted to you're fire.  He's a bit mangy and dirty but he also looks pretty hungry. You reach towards your leftovers, there are a few bones you could toss over from the game you've been cooking yourself. But as you turn towards the remains, you find yourself face to face with a raccoon! Before you can even react, the dog scares the raccoon away. You nod approvingly, toss him a bone, and he rests by the fire.
+You are camping. A random dog has walked in from the woods surrounding you. It's October and the nights are starting to get really cold. The dog seems to have been attracted to you're fire.  He's a bit mangy and dirty but he also looks pretty hungry. You reach towards your leftovers, there are a few bones you could toss over from the game you've been cooking yourself. But as you turn towards the remains, you find yourself face to face with a raccoon! Before you can even react, the dog scares the raccoon away. You nod approvingly, toss him a bone, and he rests by the fire.
 
  Camp Dog is helping protect you from the wild animals surrounding you. He's not necessarily friendly, but as long as you toss him a bone on occasion and keep your fire going, camp dog will stick around. 
- 
+
+ ## _Game Technologies_
+
+This version of the game was built with **HTML**, **CSS**, and **JavaScript** with the help of _Visual Studio Code_.
+
 ## _Game Instructions_
 
 Simply press the **Fire** button to raise the warmth meter, 
 
 ![Screenshot One](images/fire-down-screenshot.png)
 
-and press the **Bone** button as as the meters run down down. 
+and press the **Bone** button to raise the the nourish meter.
 
 ![Screenshot Two](images/bone-down-screen-shot.png)
 
