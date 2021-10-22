@@ -96,7 +96,7 @@ function ranAway() {
 }
 
 function renderWin() {
-    document.getElementById('winStatement').innerHTML = '<span></br>You kept him around for ' + parSecs + ' parsecs and he now trusts you.</br>Prepare yourself for CAMP DOG 2: WOLF PACK</span>'
+    document.getElementById('winStatement').innerHTML = '<span>You kept him around for ' + parSecs + ' parsecs and he now trusts you.</br>Turns out he was raised by wolves.</br>Prepare yourself for CAMP DOG 2: WOLF PACK</span>'
 
 }
 
