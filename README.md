@@ -33,3 +33,8 @@ The faster you press, the faster the meter fills.
 
  Get ready to befriend the wild beast that is CAMP DOG to find out more about him!
  
+ ## _Icebox_
+
+ * Hunt Mode
+ * Stamina 
+ * Item collect
