@@ -8,10 +8,10 @@
 //// Create timer function that lowers warmth and nourishment over time
 //// Status check function will contain conditional so if Weight or Health of Camp Dog are lower than set set perameter to make console disappear
 //// Camp Dog will then run away
-// GameOver Screen
-// Camper is left alone, surounded by wolves
+//// GameOver Screen
+//// Camper is left alone, surounded by wolves
 //// If Camp Dog stays at camp long enough, his Wolf Pack shows up
-// Open Reset "Win" Window, intro upcoming sequel/ paywall
+//// Open Reset "Win" Window, intro upcoming sequel/ paywall
 // Sequel will be named Camp Dog 2: Wolf Pack
 // Camp Dog has no name
 
@@ -20,14 +20,25 @@ let warmth = 5
 
 let parSecs = 0, clock
 
-// const dayNightBtn = document.querySelector('#day-night-btn')
+let background = document.getElementById("camp")
 
-// dayNightBtn.addEventListener('click', toggleDayNight)
+const dayNightBtn = document.getElementById('day-night-btn')
 
-// function toggleDayNight() {
-// } 
+dayNightBtn.addEventListener('click', toggleDayNight)
 
-let background = document.querySelector(".night-time")
+function toggleDayNight() {
+    const campSite = Array.from(background.classList)
+    console.log(campSite[0])
+    if (campSite[0] === 'night-time') {
+        background.classList.remove("night-time")
+        background.classList.add("day-time")
+    } else {
+        background.classList.remove("day-time")
+        background.classList.add("night-time")
+    }
+    
+} 
+
 clock = setInterval(elapsedTime, 1500)
 
 function elapsedTime() {
@@ -36,11 +47,8 @@ function elapsedTime() {
     playPad()
     fireGauge()
     boneGauge()
-    console.log(parSecs) 
-    console.log(`warmth: ${warmth}, nourish: ${nourish}`)
     if(parSecs >= 15) {
         clearInterval(clock)
-        console.log(`Youv've kept him around`)
         renderWin()
     }
     if (warmth === 0 || nourish === 0) {
@@ -52,14 +60,12 @@ function elapsedTime() {
 document.getElementById("bone").onclick = function feed() {
     if (nourish < 5) {
         nourish++
-        console.log("CampDog fed")
     }
 }
 
 document.getElementById("fire").onclick = function warm() {
     if (warmth < 5) {
         warmth++
-        console.log("CampDog warmed up")
     }
 }
 
@@ -84,7 +90,6 @@ function playPad() {
 }
 
 function ranAway() {
-    // if statement needed to handle day-time change
     background.classList.remove("night-time")
     background.classList.add("game-over")
     document.getElementById('endStatement').innerHTML = '<span>CAMP DOG R-U-N-N-O-F-T! </br>You kept him around for ' + parSecs + ' parsecs.</br>You can hear the wolves approaching...</span>';
